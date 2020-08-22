@@ -18,19 +18,13 @@ brew -v
 brew install docker
 # バージョンを確認し、インストールされていることを確認する
 docker -v
-```
-
-### Docker Compose
-
-```sh
-brew install docker-compose -v
-# バージョンを確認し、インストールされていることを確認する
 docker-compose -v
 ```
 
 ## Docker環境の立ち上げ
 
 ```sh
+open /Applications/Docker.app
 make up
 open http://localhost:3000
 ```

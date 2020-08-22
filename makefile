@@ -1,2 +1,2 @@
 up:
-	docker-compose up --build && docker-compose run web rake db:create
+	docker-compose up --build -d && docker-compose run web rake db:create
