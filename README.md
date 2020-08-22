@@ -12,36 +12,20 @@
 brew -v
 ```
 
-### rbenv
-
-```sh
-brew install rbenv
-echo '# rbenv' >> ~/.bash_profile
-echo 'export PATH=~/.rbenv/bin:$PATH' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-source .bash_profile
-# バージョンを確認し、インストールされていることを確認する
-rbenv -v
-```
-
-### Ruby
-
-```sh
-rbenv install 2.7.1
-# バージョンを確認し、2.7.1でインストールされていることを確認する
-ruby -v
-```
-
-### Docker & Docker Compose
+### Docker
 
 ```sh
 brew install docker
-brew cask install docker
 # バージョンを確認し、インストールされていることを確認する
 docker -v
+```
+
+### Docker Compose
+
+```sh
+brew install docker-compose -v
+# バージョンを確認し、インストールされていることを確認する
 docker-compose -v
-# Dockerを開き、ログインなどを行う
-open /Applications/Docker.app
 ```
 
 ## Docker環境の立ち上げ
