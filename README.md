@@ -1,24 +1,52 @@
-# README
+# 環境構築
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+***構築作業はプロジェクトディレクトリで実施***
 
-Things you may want to cover:
+## 準備
 
-* Ruby version
+### Homebrew
 
-* System dependencies
+``` sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# バージョンを確認し、インストールされていることを確認する
+brew -v
+```
 
-* Configuration
+### rbenv
 
-* Database creation
+```sh
+brew install rbenv
+echo '# rbenv' >> ~/.bash_profile
+echo 'export PATH=~/.rbenv/bin:$PATH' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source .bash_profile
+# バージョンを確認し、インストールされていることを確認する
+rbenv -v
+```
 
-* Database initialization
+### Ruby
 
-* How to run the test suite
+```sh
+rbenv install 2.7.1
+# バージョンを確認し、2.7.1でインストールされていることを確認する
+ruby -v
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Docker & Docker Compose
 
-* Deployment instructions
+```sh
+brew install docker
+brew cask install docker
+# バージョンを確認し、インストールされていることを確認する
+docker -v
+docker-compose -v
+# Dockerを開き、ログインなどを行う
+open /Applications/Docker.app
+```
 
-* ...
+## Docker環境の立ち上げ
+
+```sh
+make up
+open http://localhost:3000
+```
